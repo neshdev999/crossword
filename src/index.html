@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Crossword Solver</title>
+    <base href="/">
+
+    <!--CSS Files-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Icons-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="headerImageContainer">
+            <div class="headerImageItem">
+                <img src="images/dictionary-icon-med-1.png" alt="dictionary book with dark red shades">
+            </div>
+        </div>
+        <h1>Crossword Solver</h1>
+    </header>
+    <main>
+        <div class="mainContentContainer">
+            <div class="formHolder">
+                <h2>Get your items <br> from the English dictionary</h2>
+                <form class="dictForm">
+                    <div><label for="quantity" class="wordLengthLabel">Word Length</label></div>
+                    <div><input type="number" id="quantity" name="tryquantity" min="1" max="24" class="wordLengthInput" placeholder="Enter your word length" required></div>
+                    <div id="validationWordLengthOutput"></div>
+                    <div><label for="wSearch" class="wordSearchLabel">Word Search Pattern</label><span class="searchIcon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg></span></div>
+                    <div><input type="text" id="wSearch" name="wSearch" pattern="[A-Za-z-]{1,24}" class="wordSearchInput" placeholder="Enter your word pattern" required></div>
+                    <div id="validationBothFieldsOutput"></div>
+                    <input type="submit" value="Search" onclick="calculateProcess()" class="searchBtn brick">
+                </form>
+                <div class="rulesCardContainer">
+                    <div class="rulesCard">
+                        <div class="scene scene--card">
+                            <div class="card">
+                                <div class="card__face card__facesidefront">
+                                    <div class="frontText">Usage Instructions<br><span class="instArrowIcon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                                  </svg></span></div>
+                                </div>
+                                <div class="card__face card__facesideback">
+                                    <div class="backText">
+                                        This application supports word patterns to find words in specific format from the English Dictionary.
+                                        <ul>
+                                            <li>Word Length: Enter word length and get all words of same length from the dictionary.</li>
+                                            <li>Word Search Pattern: Use '-'(Hyphen, minus or dash) to specify unknown letters.For example A-AC-S. Letters and Hyphen only are allowed.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resultInstHolder">
+                <h2>Dictionary Search Results</h2>
+                <div class="initialProcessImage"><img src="images/mask.png" alt="funny mask image telling that use mask before using this dictionary"></div>
+                <div class="viewerOutputContainer">
+                    <div class="viewerOutputSection">
+                        <div class="viewerOutputDesk">
+                            <p id="arrayOutput" class="viewerOutputStyles"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer">
+            <span>Copyright &copy; <span id="copyRightYear"></span> Nesh.</span>
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

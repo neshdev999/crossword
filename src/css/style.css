@@ -1,0 +1,435 @@
+/* Common Styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(to left, lightblue, #6E848E);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+
+/* Header Sections*/
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    color: #1D1D1F;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 28px;
+    color: #1067CA;
+    text-align: center;
+    padding: 10px;
+    margin: 1%;
+}
+
+.headerImageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerImageItem {
+    flex: 1;
+}
+
+.headerImageItem>img {
+    width: 100%;
+}
+
+
+/* small screen */
+
+@media screen and (max-width: 992px) {
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 35px;
+        color: #1D1D1F;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+    }
+    h2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 28px;
+        color: #1067CA;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+    }
+    .headerImageContainer>img {
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 2%;
+        padding: 1%;
+    }
+}
+
+
+/* Main Content Section*/
+
+.mainContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.formHolder {
+    flex: 1;
+    margin: 2%;
+    padding: 2%;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    border: 0px solid;
+}
+
+.resultInstHolder {
+    flex: 1;
+    margin: 2%;
+    padding: 2%;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    border: 0px solid;
+}
+
+
+/* small screen */
+
+@media screen and (max-width: 992px) {
+    .mainContentContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .formHolder {
+        margin: 5%;
+        padding: 10%;
+    }
+    .resultInstHolder {
+        margin: 5%;
+        padding: 10%;
+    }
+}
+
+.dictForm {
+    padding: 1%;
+    margin: 1%;
+}
+
+.initialProcessImage {
+    display: block;
+    text-align: center;
+}
+
+.wordLengthLabel {
+    color: #000100;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 22px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.wordLengthInput {
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 70%;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.wordSearchLabel {
+    color: #000100;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 22px;
+    margin-left: 10%;
+    margin-right: 4%;
+    text-align: center;
+}
+
+.wordSearchInput {
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 70%;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.searchIcon {
+    color: #F15950;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 40px;
+    margin: 0.1%;
+}
+
+.searchBtn {
+    width: 30%;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    transition: 0.5s;
+    font-size: 22px;
+    border-radius: 5px;
+    font-family: 'Sniglet', cursive;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.searchBtn:hover {
+    border: none;
+    color: white;
+    font-size: 24px;
+    transform: scale(1.1);
+}
+
+.brick {
+    border: 2px solid #FF5722;
+    color: #FF5722;
+}
+
+.brick:hover {
+    background-color: #FF5722;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* small screen */
+
+@media screen and (max-width: 992px) {
+    .wordLengthLabel {
+        font-size: 26px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+    .wordLengthInput {
+        padding: 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: 70%;
+        font-size: 20px;
+    }
+    .wordSearchLabel {
+        font-size: 26px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+    .wordSearchInput {
+        padding: 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: 70%;
+        font-size: 20px;
+    }
+    .searchIcon {
+        color: #F15950;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-size: 26px;
+        margin: 1%;
+    }
+    .searchBtn {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .searchBtn:hover {
+        font-size: 26px;
+    }
+}
+
+
+/* Instruction Card */
+
+.rulesCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rulesCard {
+    flex: 1;
+    margin: 2%;
+}
+
+.scene {
+    width: 450px;
+    height: 400px;
+    border: 1px solid #CCC;
+    margin: 30px 0;
+    perspective: 600px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    text-align: center;
+    /* font-weight: bold; */
+    backface-visibility: hidden;
+}
+
+.frontText {
+    padding: 15px;
+    margin: 10px;
+    font-size: 26px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.backText {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+    text-align: left;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.backText>ul>li {
+    padding: 5px;
+    margin: 5px;
+}
+
+.instArrowIcon {
+    color: #000000;
+    text-align: center;
+    font-size: 40px;
+    margin: 2%;
+}
+
+.card__facesidefront {
+    background: #BDBAB5;
+}
+
+.card__facesideback {
+    background: #F8F9FB;
+    transform: rotateY(180deg);
+}
+
+
+/* small screen */
+
+@media screen and (max-width: 992px) {
+    .rulesCard {
+        flex: 1;
+        margin: 1%;
+    }
+    .scene {
+        width: 400px;
+        height: 350px;
+    }
+    .frontText {
+        font-size: 20px;
+    }
+    .backText {
+        font-size: 16px;
+    }
+}
+
+
+/* Viewer Output */
+
+.viewerOutputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewerOutputSection {
+    flex: 1;
+    margin: 20%;
+}
+
+.viewerOutputStyles {
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.viewerOutputDesk {
+    display: none;
+    width: 600px;
+    border: 1px solid #151516;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background: #7C80AC;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+
+/* small screen */
+
+@media screen and (max-width: 992px) {
+    .viewerOutputSection {
+        margin: 10%;
+    }
+    .viewerOutputDesk {
+        width: 450px;
+        font-size: 20px;
+    }
+}
+
+
+/* Footer */
+
+.footer {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+    background: #FBFBFD;
+}
